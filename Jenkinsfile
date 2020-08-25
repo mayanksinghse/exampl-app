@@ -5,7 +5,7 @@ node {
    }
    stage ('build image')
    {
-     app=docker.build('mayank/exampl-app')
+     app=docker.build('mayankse/mayank')
   }
   stage ('push image')
   {
