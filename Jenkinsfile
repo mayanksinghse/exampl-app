@@ -1,7 +1,7 @@
 node {
      def app
      stage ('Clone Repository'){
-         chheckout scm
+         checkout scm
    }
    stage ('build image')
    {
@@ -9,7 +9,7 @@ node {
   }
   stage ('push image')
   {
-     docker.withRegistery('https://registry.hub.docker.com','docker-hub-credential'){
+     docker.withRegistery('https://registry.hub.docker.com', 'docker-hub-credential'){
               app.push('latest')
 	}
   }
