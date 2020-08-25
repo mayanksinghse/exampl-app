@@ -6,7 +6,6 @@ node {
    stage ('build image')
    {
      app=docker.build('mayankse/mayank')
-     apptag=docker.tag('mayankse/mayank1')	   
   }
   stage ('push image')
   {
